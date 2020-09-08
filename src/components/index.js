@@ -1,0 +1,7 @@
+export { default as FootNav } from './FootNav'
+export { default as Swiper } from './Swiper'
+export { default as Header} from './Header'
+export { default as SearchInput} from './SearchInput'
+export { default as LoadMore} from './LoadMore'
+export { default as Tabs} from './Tabs'
+export { default as Star} from './Star'

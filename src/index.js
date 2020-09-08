@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import AppRouter from './router/AppRouter'
+// 引入公共less
+import './static/css/common.less'
+// 引入图标库 两个
+import './static/css/font.css'
+import './static/css/iconfont.css'
+
+// 关联redux
+import { Provider } from 'react-redux'
+import configureStore from './store'
+const store = configureStore()
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <AppRouter/>
+  </Provider>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
